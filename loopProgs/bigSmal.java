@@ -1,19 +1,36 @@
 import java.util.Scanner;
-class bigSmal
+class stringRev
 {
     public static void main(String args[]) 
     {
-        Scanner inputScanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        int big = Integer.MIN_VALUE;
-        int smal = Integer.MAX_VALUE;
+        System.out.println("how much numers shall be enterd");
+        System.out.println("(enter number only,nothing crazy too)");
+        System.out.println("Enter: ");
 
-            while (number != 0)
+        int userNumb = scanner.nextInt();
+        int daBiggy = 0;
+        int daSmally = 99999;
+
+        while (userNumb > 0) 
+        {
+            System.out.println("enter thou number " + userNumb + " remaining.");
+            
+            int newNum = scanner.nextInt();
+
+            userNumb--;
+
+            if(daBiggy < newNum)
             {
-                System.out.print("Enter any amount of numbers, and enter 0 if you want to stop.");
-                int usersNums = scanner.nextInt();
-
-                if ()
+                daBiggy = newNum;
             }
+            if(daSmally >= newNum)
+            {
+                daSmally = newNum;
+            }
+        }
+            System.out.println("da smalles numer is: " + daSmally);
+            System.out.println("da bigges numer is: " + daBiggy);
     }
 }

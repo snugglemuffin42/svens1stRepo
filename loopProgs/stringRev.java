@@ -3,34 +3,14 @@ class stringRev
 {
     public static void main(String args[]) 
     {
-        Scanner scanner = new Scanner(System.in);
+        Scanner inputScanner = new Scanner(System.in);
 
-        System.out.println("how much numers shall be enterd");
-        System.out.println("(enter number only,nothing crazy too)");
-        System.out.println("Enter: ");
+        System.out.println("Enter a word (no numbers)");
+        String userWord=inputScanner.next();
 
-        int userNumb = scanner.nextInt();
-        int daBiggy = 0;
-        int daSmally = 99999;
-
-        while (userNumb > 0) 
-        {
-            System.out.println("enter thou number " + userNumb + " remaining.");
-            
-            int newNum = scanner.nextInt();
-
-            userNumb--;
-
-            if(daBiggy < newNum)
+            for(int i = userWord.length() - 1; i >= 0; i--)
             {
-                daBiggy = newNum;
+                System.out.print(userWord.charAt(i));
             }
-            if(daSmally >= newNum)
-            {
-                daSmally = newNum;
-            }
-        }
-            System.out.println("da smalles numer is: " + daSmally);
-            System.out.println("da bigges numer is: " + daBiggy);
     }
 }
